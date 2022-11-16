@@ -28,7 +28,7 @@ void shell(int ac, char **av, char **env)
 			args[0] = find_path(args[0], tmp, er);
 			if (args[0] == er)
 			{
-				args[0] = find_cwd(filename, er);
+				args[0] = search_cwd(filename, er);
 				if (args[0] == filename)
 					write(1, er, 5);
 			}
